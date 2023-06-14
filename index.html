@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="width: 100%; text-align: center; color: rgb(41, 0, 130);">Erin's MadLibs Adventure!</h1>
+
+    <h3>To play, fill in each of the boxes with the words then submit!!!</h3>
+
+    
+    <form id="phrases" onsubmit="updateText()" >
+        <label for="name1">Enter the first person's name:</label>
+        <input type="text" id="name1" name="name1"><br><br>
+
+        <label for="name2">Enter the second person's name:</label>
+        <input type="text" id="name2" name="name2"><br><br>
+
+        
+        <label for="verb1">Enter a verb:</label>
+        <input type="text" id="verb1" name="verb1"><br><br>
+
+        <label for="verb2">Enter a verb:</label>
+        <input type="text" id="verb2" name="verb2"><br><br>
+
+        <label for="verb3">Enter a verb:</label>
+        <input type="text" id="verb3" name="verb3"><br><br>
+        
+        <label for="verb4">Enter a verb:</label>
+        <input type="text" id="verb4" name="verb4"><br><br>
+
+        <label for="verb5">Enter a verb:</label>
+        <input type="text" id="verb5" name="verb5"><br><br>
+
+
+        <label for="noun1">Enter a Noun: </label>
+        <input type="text" id="noun1" name="noun1"><br><br>
+
+        <label for="noun2">Enter a Noun: </label>
+        <input type="text" id="noun2" name="noun2"><br><br>
+
+
+        <label for="animal">Enter an Animal: </label>
+        <input type="text" id="animal" name="animal"><br><br>
+
+        <label for="food1">Enter a Food: </label>
+        <input type="text" id="food1" name="food1"><br><br>
+
+        <label for="food2">Enter a Food: </label>
+        <input type="text" id="food2" name="food2"><br><br>
+
+        <label for="drink">Enter a Drink: </label>
+        <input type="text" id="drink" name="drink"><br><br>
+
+        <label for="bodyofwater">Enter a Body of Water: </label>
+        <input type="text" id="bodyofwater" name="bodyofwater"><br><br>
+
+        <label for="adjective">Enter an Adjective: </label>
+        <input type="text" id="adjective" name="adjective"><br><br>
+
+        <label for="adjectivesummer">Enter a Summer Adjective: </label>
+        <input type="text" id="adjectivesummer" name="adjectivesummer"><br><br>
+
+        <input id="submitbutton" type="submit" value="Submit">
+    </form>
+
+
+    <div id="story">
+        <p id="storybody">
+            One day, (name1) and (name2) decided to (verb1) while on their summer vacation. (name1) grabbed a (noun1) and hit the road! (name1)
+            thought they should (verb2) which (name 2) thought was really crazy. Its summer vacation! We have to (verb3)! (name1) exclaimed. 
+            While on their journey (name 1) saw a (animal) climbing a (noun) and that scared (name2). Later, it was time for a snack so (name2)
+            suggested they eat (type of food) and (typeoffood2) and drink (typeofdrink) juice. Summertime is all about (adjective) experiences,
+            and (name1) and (name2) wanted to make the most of it. After a quick (verb) in the (body of water), it was time to (verb). 
+            It had been another (summer adjective) day!
+        </p>
+    </div>
+
+</body>
+    <script>
+        function getValue(id) {
+            return document.getElementById(id).value;
+        }
+
+
+        let story = document.getElementById("story");
+
+        function updateText() {
+            event.preventDefault();
+    
+            let story = "One day, " + getValue("name1") + " and " + getValue("name2") + " decided to " + getValue("verb1") 
+             + " while on their summer vacation. " + getValue("name1") + " grabbed a " + getValue("noun1") + " and hit the road! " + getValue("name1") + " thought they should " + getValue("verb2") 
+             + " which " + getValue("name2") + " thought was really crazy. Its summer vacation! We have to " + getValue("verb3") + "! " + getValue("name1") + " exclaimed. While on their journey " + getValue("name1")
+             + " saw a " + getValue("animal") + " climbing a " + getValue("noun1") + " and that scared " + getValue("name2") + ". Later, it was time for a snack so " + getValue("name2") + " suggested they eat "
+             + getValue("food1") + " and " + getValue("food2") + " and drink " + getValue("drink") + " juice. Summertime is all about " + getValue("adjective") + " experiences, and " + getValue("name1")
+             + " and " + getValue("name2") + " wanted to make the most of it. After a quick " + getValue("verb4") + " in the " + getValue("bodyofwater") + ", it was time to " + getValue("verb5") + ". It had been another " + getValue("adjectivesummer") + " day.";
+
+            let actualstory = document.getElementById("storybody");
+
+            console.log("STORY IS: " + story);
+
+            actualstory.innerText = story;
+            return false;
+        }
+    </script>
+
+
+</html>

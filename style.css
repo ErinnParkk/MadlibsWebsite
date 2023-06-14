@@ -1,0 +1,61 @@
+html {
+    background-color: rgb(53, 79, 158);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+input {
+    background-color:rgb(228, 241, 255);
+    border-radius: 30px;
+}
+
+#submitbutton:hover {
+    background-color: pink;
+    color: white;
+    transition: all;
+}
+
+body {
+    background-color: rgb(187, 228, 255); 
+    width: 900px;
+    margin: 0 auto;
+    border: 5px double black; 
+    padding: 0px 20px 20px 20px;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 60px;
+    text-align: center;
+}
+
+img {
+    display: block;
+    width: 30%;
+    margin: 20px auto;
+    /* display: none; */ 
+    /* width: 70% */
+    /* margin: 20px auto; */
+}
+
+.coolbox {
+    border: mediumseagreen dotted 3px;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 10px;
+    background-color: beige;
+}
+
+p, li {
+    /* display: inline; */
+    font-size: 24px;
+    line-height: 2;
+    letter-spacing: 1px;
+    font-family: 'Lato', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+    color: rgb(47, 154, 255);
+}
+
+
